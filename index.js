@@ -1241,7 +1241,7 @@ class VideoPlayer extends React.Component {
                                                     <>
                                                     <TouchableOpacity
                                                         activeOpacity={0.5}
-                                                        style={{ padding: 10, bottom: 4, right: 5, zIndex: 9999, alignSelf: "center" }}
+                                                        style={{ padding: 10, bottom: 1, right: 5, zIndex: 9999, alignSelf: "center" }}
                                                         onPress={() => { this.setState({ showConts: false, showSpeedRate: true, showLockCont: false }) }}
                                                     >
                                                         <Text style={{ color: "#fff" }}>倍速</Text>
