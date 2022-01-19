@@ -285,7 +285,7 @@ export const Header = (props) => {
                     :
                     <SafeAreaView style={{ backgroundColor: "#000" }} />
             }
-            <StatusBar translucent={true} barStyle={"light-content"} />
+            <StatusBar translucent={true} />
         </>
     )
 
