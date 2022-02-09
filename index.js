@@ -111,7 +111,7 @@ class VideoPlayer extends React.Component {
             bottomContsBottom: 0,//下部分控件的bottom定位值
             showOpenVip: false,//是否显示开通vip提示
             currentTime: 0.0,
-            showLoading: false,//是否显示正在加载
+            showLoading: true,//是否显示正在加载
             showConts: true,
             showDrTime: false,//拖动进度条时显示的时间进度
             showChangeList: false,//控制是否显示全屏选集
@@ -854,6 +854,11 @@ class VideoPlayer extends React.Component {
         })
     }
 
+    setLoading = () => {
+        this.setState({
+          showLoading: true
+        })
+    }
 
     showLockAndCont = () => {
         const GSHOWSTATE = { showLockCont: true, showConts: true, showChangeList: false, showSpeedRate: false }
