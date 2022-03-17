@@ -1007,7 +1007,7 @@ class VideoPlayer extends React.Component {
         const speedLoToWidth = stateWidth / this.speedTouchScale
         return (
             <>
-                {this.props.statusBar ? (smallP && this.props.statusBar()) : <Header width={stateWidth} />}
+                {/* {this.props.statusBar ? (smallP && this.props.statusBar()) : <Header width={stateWidth} />} */}
                 <View ref={ref => this.videoBox = ref} style={{ backgroundColor: "#000", position: 'relative' }}>
 
                     <View style={{}}>
