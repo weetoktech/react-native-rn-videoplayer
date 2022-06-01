@@ -1054,6 +1054,9 @@ class VideoPlayer extends React.Component {
                                     onBuffer={(e) => this.animatedonBuffer(e)}
                                     onError={this.videoError}
                                     width={this.props.width ? this.props.width : stateWidth}
+                                    fullscreen={this.props.fullscreen ? this.props.fullscreen : false}
+                                    fullscreenAutorotate={this.props.fullscreenAutorotate ? this.props.fullscreenAutorotate : true}
+                                    fullscreenOrientation={this.props.fullscreenOrientation ? this.props.fullscreenOrientation : 'all'}
                                     style={{ height: stateHeight, backgroundColor: "#000000" }} />
                                 <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, top: 0, flexDirection: "row", justifyContent: 'space-between', }}>
                                     <View ref={(e) => this.leftSpeedRef = e} style={{ opacity: 0, width: stateHeight * 2, backgroundColor: "rgba(0,0,0,0.5)", borderRadius: stateHeight * 2, right: stateHeight * 2 - speedLoToWidth, height: stateHeight * 2, top: -stateHeight / 2 }}></View>
@@ -1233,13 +1236,14 @@ class VideoPlayer extends React.Component {
                                                 >
                                                     <Text style={{ color: "#fff" }}>倍速</Text>
                                                 </TouchableOpacity>
+                                                { this.props.hideFullscreenBtn !== true &&
                                                 <TouchableOpacity
                                                     activeOpacity={0.5}
                                                     style={{ padding: 10, width: 40, bottom: 0, right: 5, zIndex: 9999, alignSelf: "center", justifyContent: "flex-end" }}
                                                     onPress={() => { this.changeAllBox() }}
                                                 >
                                                     <SvgVideoAllBox height="20" width="20" />
-                                                </TouchableOpacity >
+                                                </TouchableOpacity > }
                                                 </>
                                                 : (
                                                     !this.props.continuous &&
